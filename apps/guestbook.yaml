@@ -4,15 +4,14 @@ metadata:
   name: guestbook
   namespace: argocd
 spec:
-  project: default
-  replicas: 2
+  project: guestbook
   source:
     repoURL: https://github.com/argoproj/argocd-example-apps.git
     targetRevision: HEAD
     path: guestbook
   destination:
     server: https://kubernetes.default.svc
-    namespace: argocd
+    namespace: guestbook
   syncPolicy:
     automated:
       prune: true
