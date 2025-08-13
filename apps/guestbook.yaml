@@ -5,6 +5,7 @@ metadata:
   namespace: argocd
 spec:
   project: default
+  replicas: 2
   source:
     repoURL: https://github.com/argoproj/argocd-example-apps.git
     targetRevision: HEAD
