@@ -11,7 +11,7 @@ spec:
     path: app3
   destination:
     server: https://kubernetes.default.svc
-    namespace: app3
+    namespace: argocd
   syncPolicy:
     automated:
       prune: true
