@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/maksim-sialitski/argocd.git
     targetRevision: HEAD
-    path: apps   # <-- именно apps
+    path: apps   # <-- подтянет все Application внутри apps/
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
@@ -16,10 +16,3 @@ spec:
     automated:
       prune: true
       selfHeal: true
-  sources:
-    - repoURL: https://github.com/maksim-sialitski/argocd.git
-      targetRevision: HEAD
-      path: apps/kafka
-    - repoURL: https://github.com/maksim-sialitski/argocd.git
-      targetRevision: HEAD
-      path: apps/kafka-ui
