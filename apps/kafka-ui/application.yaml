@@ -7,8 +7,8 @@ spec:
   project: default
   source:
     repoURL: https://provectus.github.io/kafka-ui-charts
-    targetRevision: 0.7.5   # версия чарта kafka-ui
     chart: kafka-ui
+    targetRevision: 0.7.5
     helm:
       releaseName: kafka-ui
       values: |
