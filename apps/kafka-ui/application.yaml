@@ -7,14 +7,16 @@ spec:
   project: default
   source:
     repoURL: https://provectus.github.io/kafka-ui-charts
-    chart: kafka-ui
     targetRevision: 0.7.5
+    chart: kafka-ui
     helm:
-      releaseName: kafka-ui
       values: |
+        service:
+          type: ClusterIP
         envs:
-          KAFKA_CLUSTERS_0_NAME: local
-          KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka.kafka.svc.cluster.local:9092
+          config:
+            KAFKA_CLUSTERS_0_NAME: local
+            KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka.kafka.svc.cluster.local:9092
   destination:
     server: https://kubernetes.default.svc
     namespace: kafka
