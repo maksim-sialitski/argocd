@@ -16,3 +16,17 @@ spec:
     automated:
       prune: true
       selfHeal: true
+  # Здесь определяем дочерние приложения
+  sources:
+    - repoURL: https://github.com/maksim-sialitski/argocd.git
+      targetRevision: HEAD
+      path: apps/frontend
+    - repoURL: https://github.com/maksim-sialitski/argocd.git
+      targetRevision: HEAD
+      path: apps/backend
+    - repoURL: https://github.com/maksim-sialitski/argocd.git
+      targetRevision: HEAD
+      path: apps/database
+    - repoURL: https://github.com/maksim-sialitski/argocd.git
+      targetRevision: HEAD
+      path: apps/kafka   # <--- добавлен Kafka
