@@ -1,5 +1,5 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- kafka/manifest/application.yaml  # Путь к Kafka
+- kafka/application.yaml  # Путь к Kafka
 - kafka-ui/application.yaml  
