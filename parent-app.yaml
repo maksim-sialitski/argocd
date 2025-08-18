@@ -16,3 +16,10 @@ spec:
     automated:
       prune: true
       selfHeal: true
+  sources:
+    - repoURL: https://github.com/maksim-sialitski/argocd.git
+      targetRevision: HEAD
+      path: apps/kafka
+    - repoURL: https://github.com/maksim-sialitski/argocd.git
+      targetRevision: HEAD
+      path: apps/kafka-ui
