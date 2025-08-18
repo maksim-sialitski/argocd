@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://charts.bitnami.com/bitnami
-    targetRevision: 26.6.2   # версия чарта
+    targetRevision: 26.6.2
     chart: kafka
     helm:
       releaseName: kafka
@@ -15,15 +15,11 @@ spec:
         replicaCount: 1
 
         kraft:
-          enabled: false   # Отключаем KRaft
+          enabled: false   # выключаем KRaft
 
         zookeeper:
-          enabled: true    # Включаем Zookeeper
+          enabled: true
           replicaCount: 1
-
-        listeners:
-          client:
-            protocol: PLAINTEXT
   destination:
     server: https://kubernetes.default.svc
     namespace: kafka
